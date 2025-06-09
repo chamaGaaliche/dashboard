@@ -1,6 +1,7 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Custom CSS variables pour shadcn/ui */
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -39,7 +40,7 @@
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
     --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
     --border: 217.2 32.6% 17.5%;
@@ -48,14 +49,15 @@
   }
 }
 
-/* Styles de base */
 @layer base {
   * {
     border-color: hsl(var(--border));
+    @apply border-border;
   }
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
+    @apply bg-background text-foreground;
   }
 }
 
